@@ -503,6 +503,30 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "extra":
         buttons = [[
+            InlineKeyboardButton('Fɪʟᴛᴇʀ', callback_data='filtr'),
+            InlineKeyboardButton('Pᴜʀɢᴇ', callback_data='autofilter'),
+            InlineKeyboardButton('Sᴘᴇᴇᴅ ᴛᴇsᴛ', callback_data='start'),
+        ], [
+            InlineKeyboardButton('Fɪʟᴇ Sᴛᴏʀᴇ', callback_data='extra'),
+            InlineKeyboardButton('Mᴜᴛᴇ', callback_data='admin'),
+            InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
+        ], [
+            InlineKeyboardButton('URL-Sʜᴏʀᴛ', callback_data='start'),
+            InlineKeyboardButton('Iɴғᴏ', callback_data='extra'),
+            InlineKeyboardButton('Pɪɴɢ', callback_data='start'),
+        ], [
+            InlineKeyboardButton('Iᴍᴅʙ', callback_data='extra'),
+            InlineKeyboardButton('Rᴇᴘᴏʀᴛ', callback_data='start'),
+            InlineKeyboardButton('Sᴛɪᴄᴋᴇʀ ɪᴅ', callback_data='start'),
+        ], [
+            InlineKeyboardButton('ʙᴜᴛᴛᴏɴs', callback_data='button'),
+            InlineKeyboardButton('Cᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
+            InlineKeyboardButton('Gɪᴛʜᴜʙ', callback_data='source'),
+        ], [
+            InlineKeyboardButton('« Pʀᴇᴠ', callback_data='start'),
+            InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close'),
+            InlineKeyboardButton('Nᴇxᴛ »', callback_data='start'),
+        ], [
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
             InlineKeyboardButton('👮‍♂️ Admin', callback_data='admin')
         ]]
@@ -519,6 +543,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ADMIN_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "filtr":
+        buttons = [[
+            InlineKeyboardButton('ᴀᴜᴛᴏ ғɪʟᴛᴇʀ', callback_data='autofilter'),
+            InlineKeyboardButton('ᴍᴀɴᴜᴀʟ ғɪʟᴛᴇʀ', callback_data='manuelfilter')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.FILTER_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
