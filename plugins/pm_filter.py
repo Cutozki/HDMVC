@@ -471,6 +471,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "bach":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.BATCH_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "button":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='manuelfilter')
@@ -504,7 +515,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "extra":
         buttons = [[
             InlineKeyboardButton('Fɪʟᴛᴇʀ', callback_data='filtr'),
-            InlineKeyboardButton('Pᴜʀɢᴇ', callback_data='autofilter'),
+            InlineKeyboardButton('ʙᴀᴛᴄʜ', callback_data='bach'),
             InlineKeyboardButton('Sᴘᴇᴇᴅ ᴛᴇsᴛ', callback_data='start'),
         ], [
             InlineKeyboardButton('Fɪʟᴇ Sᴛᴏʀᴇ', callback_data='extra'),
