@@ -482,6 +482,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "imbd":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.IMDB_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "button":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='manuelfilter')
@@ -526,7 +537,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Iɴғᴏ', callback_data='extra'),
             InlineKeyboardButton('Pɪɴɢ', callback_data='start'),
         ], [
-            InlineKeyboardButton('Iᴍᴅʙ', callback_data='extra'),
+            InlineKeyboardButton('Iᴍᴅʙ', callback_data='imbd'),
             InlineKeyboardButton('Rᴇᴘᴏʀᴛ', callback_data='start'),
             InlineKeyboardButton('Sᴛɪᴄᴋᴇʀ ɪᴅ', callback_data='start'),
         ], [
