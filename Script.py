@@ -45,6 +45,22 @@ class script(object):
 
 <b>Alert buttons:</b>
 <code>[Button Text](buttonalert:This is an alert message)</code>"""
+    BATCH_TXT = """HOW TO USE 🤔?
+📍 You have two options.
+
+<i>1. You can use the filestore feature for any public channel without bot being admin in that channel (only media messages  can be stored).</i>
+
+<i>?. What if the channel owner delete those files?
+Still your bot can serve you the files from the links it generated.</i>
+
+<i>2. You will have to add the bot to your channel as admin and add the channel ids in config vars as FILE_STORE_CHANNEL (Multiple channel ids are supported, separate each of them by a space)</i>
+
+How to generate links? 🙄
+
+1. For a single file use /link command as reply to file.(only video, audio and documents are supported for now.)
+
+2. For creating batch files , use /batch <starting message link> <ending message link>.
+Example: /batch https://t.me/iet_updates/2 https://t.me/iet_updates/9"""
     AUTOFILTER_TXT = """Help: <b>Auto Filter</b>
 
 <b>NOTE:</b>
