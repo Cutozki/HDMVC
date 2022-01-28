@@ -34,9 +34,9 @@ class script(object):
     FILTER_TXT = """𝖲𝖾𝗅𝖾𝖼𝗍 𝖺 𝖿𝗂𝗅𝗍𝖾𝗋 𝗍𝗒𝗉𝖾 𝖻𝖾𝗅𝗈𝗐:"""
     MUT_TXT = """Here is the help for the <b>Muting</b> module:
 <b>Admins only:</b>
- • <code>/mute <userhandle></code>: silences a user. Can also be used as a reply, muting the replied to user.
- • <code>/tmute <userhandle> x(m/h/d)</code>: mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- • <code>/unmute <userhandle></code>: unmutes a user. Can also be used as a reply, muting the replied to user."""
+ • <code>/mute (userhandle)</code>: silences a user. Can also be used as a reply, muting the replied to user.
+ • <code>/tmute (userhandle) x(m/h/d)</code>: mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
+ • <code>/unmute (userhandle)</code>: unmutes a user. Can also be used as a reply, muting the replied to user."""
     REPOT_TXT = """<b>Reports</b>
 
 We're all busy people who don't have time to monitor our groups 24/7. But how do you react if someone in your group is spamming?
