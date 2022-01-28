@@ -450,6 +450,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "noth":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.answer("That's not for you!!", show_alert=True)
     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
@@ -558,7 +565,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('« Pʀᴇᴠ', callback_data='start'),
             InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close'),
-            InlineKeyboardButton('Nᴇxᴛ »', callback_data='start'),
+            InlineKeyboardButton('Nᴇxᴛ »', callback_data='noth'),
         ], [
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
             InlineKeyboardButton('👮‍♂️ Admin', callback_data='admin')
