@@ -32,6 +32,41 @@ class script(object):
 • /del - <code>delete a specific filter in chat</code>
 • /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
     FILTER_TXT = """𝖲𝖾𝗅𝖾𝖼𝗍 𝖺 𝖿𝗂𝗅𝗍𝖾𝗋 𝗍𝗒𝗉𝖾 𝖻𝖾𝗅𝗈𝗐:"""
+    REPOT_TXT = """<b>Reports</b>
+
+We're all busy people who don't have time to monitor our groups 24/7. But how do you react if someone in your group is spamming?
+
+Presenting reports; if someone in your group thinks someone needs reporting, they now have an easy way to call all admins.
+
+<b>User commands:</b>
+- /report: Reply to a message to report it for admins to review.
+- admin: Same as /report
+
+<b>Admin commands:</b>
+- /reports <code><yes/no/on/off></code>: Enable/disable user reports.
+
+To report a user, simply reply to his message with @admin or /report; Rose will then reply with a message stating that admins have been notified. This message tags all the chat admins; same as if they had been @'ed.
+
+Note that the report commands do not work when admins use them; or when used to report an admin. Rose assumes that admins don't need to report, or be reported!"""
+    PARGE_TXT = """<b>Purges</b>
+
+Need to delete lots of messages? That's what purges are for!
+
+<b>Admin commands:</b>
+- /purge: Delete all messages from the replied to message, to the current message.
+- /purge <X>: Delete the following X messages after the replied to message.
+- /spurge: Same as purge, but doesnt send the final confirmation message.
+- /del: Deletes the replied to message.
+- /purgefrom: Reply to a message to mark the message as where to purge from - this should be used followed by a /purgeto.
+- /purgeto: Delete all messages between the replied to message, and the message marked by the latest /purgefrom.
+
+<b>Examples:</b>
+- Delete all messages from the replied to message, until now.
+-> /purge
+- Mark the first message to purge from (as a reply).
+-> <code>/purgefrom</code>
+- Mark the message to purge to (as a reply). All messages between the previously marked /purgefrom and the newly marked /purgeto will be deleted.
+-> /purgeto"""
     BUTTON_TXT = """Help: <b>Buttons</b>
 
 - This BoT Supports both url and alert inline buttons.
