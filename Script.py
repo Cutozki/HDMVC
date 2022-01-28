@@ -73,6 +73,20 @@ Presenting reports; if someone in your group thinks someone needs reporting, the
 To report a user, simply reply to his message with @admin or /report; Bot will then reply with a message stating that admins have been notified. This message tags all the chat admins; same as if they had been @'ed.
 
 Note that the report commands do not work when admins use them; or when used to report an admin. Bot assumes that admins don't need to report, or be reported!"""
+    FUN_TXT = """Here is the help for the <b>Fun</b> module:
+• /runs: reply a random string from an array of replies.
+• /pat: pat a person, cool thing to have for cute ones :3
+• /slap: slap a user, or get slapped if not a reply.
+• /shrug : get shrug XD.
+• /table : get flip/unflip :v.
+• /decide : Randomly answers yes/no/maybe
+• /toss : Tosses A coin
+• /roll : Roll a dice.
+• /rlg : Join ears,nose,mouth and create an emo ;-;
+• /shout <keyword>: write anything you want to give loud shout.
+• /stickerid: reply to a sticker to get its ID.
+• /getsticker: reply to a sticker to get the raw PNG image.
+• /steal: reply to a sticker or image to add it to your pack."""
     NOTE_TXT = """Notes
 
 Save data for future users with notes!
