@@ -32,6 +32,16 @@ class script(object):
 • /del - <code>delete a specific filter in chat</code>
 • /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
     FILTER_TXT = """𝖲𝖾𝗅𝖾𝖼𝗍 𝖺 𝖿𝗂𝗅𝗍𝖾𝗋 𝗍𝗒𝗉𝖾 𝖻𝖾𝗅𝗈𝗐:"""
+    TRSLT_TXT = """Here is the help for the <b>Translator</b> module:
+Use this module to translate stuff... duh!
+
+<b>Commands:</b>
+• <code>/tl</code> (or <code>/tr</code>): as a reply to a message, translates it to English.
+• <code>/tl <lang></code>: translates to <lang>
+  eg: <code>/tl ja</code>: translates to Japanese.
+• <code>/tl <source>//<dest></code>: translates from <source> to <lang>.
+  eg: <code>/tl ja//en</code>: translates from Japanese to English.
+• <code>/langs</code>: get a list of supported languages for translation."""
     MISC_TXT = """<b>Misc</b>
 
 An "odds and ends" module for small, simple commands which don't really fit anywhere.
