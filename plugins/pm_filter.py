@@ -456,7 +456,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('❌ Close', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await query.answer("That's not for you!!", show_alert=True)
+        await query.answer("Nothing Added Here.. Updating Soon 🔥!!", show_alert=True)
     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='about')
@@ -553,17 +553,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('Nᴏᴛᴇs', callback_data='note'),
             InlineKeyboardButton('Iɴғᴏ', callback_data='extra'),
-            InlineKeyboardButton('Pɪɴɢ', callback_data='start'),
+            InlineKeyboardButton('Pɪɴɢ', callback_data='noth'),
         ], [
             InlineKeyboardButton('Iᴍᴅʙ', callback_data='imbd'),
             InlineKeyboardButton('Rᴇᴘᴏʀᴛ', callback_data='ripot'),
-            InlineKeyboardButton('Sᴛɪᴄᴋᴇʀ ɪᴅ', callback_data='start'),
+            InlineKeyboardButton('Sᴛɪᴄᴋᴇʀ ɪᴅ', callback_data='noth'),
         ], [
             InlineKeyboardButton('ʙᴜᴛᴛᴏɴs', callback_data='button'),
             InlineKeyboardButton('Cᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
             InlineKeyboardButton('Gɪᴛʜᴜʙ', callback_data='source'),
         ], [
-            InlineKeyboardButton('« Pʀᴇᴠ', callback_data='start'),
+            InlineKeyboardButton('« Pʀᴇᴠ', callback_data='extra'),
             InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close'),
             InlineKeyboardButton('Nᴇxᴛ »', callback_data='noth'),
         ], [
