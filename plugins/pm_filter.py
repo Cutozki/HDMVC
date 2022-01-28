@@ -529,7 +529,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴛᴄʜ', callback_data='bach'),
             InlineKeyboardButton('Sᴘᴇᴇᴅ ᴛᴇsᴛ', callback_data='start'),
         ], [
-            InlineKeyboardButton('Fɪʟᴇ Sᴛᴏʀᴇ', callback_data='extra'),
+            InlineKeyboardButton('Pᴜʀɢᴇ', callback_data='parge'),
             InlineKeyboardButton('Mᴜᴛᴇ', callback_data='admin'),
             InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
         ], [
@@ -555,6 +555,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.EXTRAMOD_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "parge":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.PARGE_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
