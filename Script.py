@@ -32,6 +32,16 @@ class script(object):
 • /del - <code>delete a specific filter in chat</code>
 • /delall - <code>delete the whole filters in a chat (chat owner only)</code>"""
     FILTER_TXT = """𝖲𝖾𝗅𝖾𝖼𝗍 𝖺 𝖿𝗂𝗅𝗍𝖾𝗋 𝗍𝗒𝗉𝖾 𝖻𝖾𝗅𝗈𝗐:"""
+    MISC_TXT = """<b>Misc</b>
+
+An "odds and ends" module for small, simple commands which don't really fit anywhere.
+
+<b>Commands</b>:
+- /runs: Respond with a randomly generated "run away" string.
+- /id: Get a user's ID.
+- /info: Get a user's info.
+- /donate: Donate to the bot creator.
+- /markdownhelp: Information on how to use markdown with the bot. PM only."""
     MUT_TXT = """Here is the help for the <b>Muting</b> module:
 <b>Admins only:</b>
  • <code>/mute (userhandle)</code>: silences a user. Can also be used as a reply, muting the replied to user.
