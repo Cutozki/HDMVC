@@ -503,6 +503,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "loke":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.LOKE_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "autofilter":
         buttons = [[
             InlineKeyboardButton('👩‍🦯 Back', callback_data='extra')
@@ -527,7 +538,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [[
             InlineKeyboardButton('Fɪʟᴛᴇʀ', callback_data='filtr'),
             InlineKeyboardButton('ʙᴀᴛᴄʜ', callback_data='bach'),
-            InlineKeyboardButton('Sᴘᴇᴇᴅ ᴛᴇsᴛ', callback_data='start'),
+            InlineKeyboardButton('Lᴏᴄᴋ', callback_data='loke'),
         ], [
             InlineKeyboardButton('Pᴜʀɢᴇ', callback_data='parge'),
             InlineKeyboardButton('Mᴜᴛᴇ', callback_data='admin'),
