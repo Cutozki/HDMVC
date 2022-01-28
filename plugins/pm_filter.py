@@ -552,7 +552,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
         ], [
             InlineKeyboardButton('Nᴏᴛᴇs', callback_data='note'),
-            InlineKeyboardButton('Iɴғᴏ', callback_data='noth'),
+            InlineKeyboardButton('Mɪsᴄ', callback_data='misc'),
             InlineKeyboardButton('Pɪɴɢ', callback_data='noth'),
         ], [
             InlineKeyboardButton('Iᴍᴅʙ', callback_data='imbd'),
@@ -584,6 +584,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.REPOT_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "misc":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.MISC_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
