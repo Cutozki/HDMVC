@@ -538,7 +538,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Pɪɴɢ', callback_data='start'),
         ], [
             InlineKeyboardButton('Iᴍᴅʙ', callback_data='imbd'),
-            InlineKeyboardButton('Rᴇᴘᴏʀᴛ', callback_data='start'),
+            InlineKeyboardButton('Rᴇᴘᴏʀᴛ', callback_data='ripot'),
             InlineKeyboardButton('Sᴛɪᴄᴋᴇʀ ɪᴅ', callback_data='start'),
         ], [
             InlineKeyboardButton('ʙᴜᴛᴛᴏɴs', callback_data='button'),
@@ -555,6 +555,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.EXTRAMOD_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "ripot":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.REPOT_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
