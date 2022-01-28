@@ -548,11 +548,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Lᴏᴄᴋ', callback_data='loke'),
         ], [
             InlineKeyboardButton('Pᴜʀɢᴇ', callback_data='parge'),
-            InlineKeyboardButton('Mᴜᴛᴇ', callback_data='admin'),
+            InlineKeyboardButton('Mᴜᴛᴇ', callback_data='mut'),
             InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
         ], [
             InlineKeyboardButton('Nᴏᴛᴇs', callback_data='note'),
-            InlineKeyboardButton('Iɴғᴏ', callback_data='extra'),
+            InlineKeyboardButton('Iɴғᴏ', callback_data='noth'),
             InlineKeyboardButton('Pɪɴɢ', callback_data='noth'),
         ], [
             InlineKeyboardButton('Iᴍᴅʙ', callback_data='imbd'),
@@ -584,6 +584,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.REPOT_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "mut":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.MUT_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
