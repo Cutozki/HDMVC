@@ -45,9 +45,26 @@ Presenting reports; if someone in your group thinks someone needs reporting, the
 <b>Admin commands:</b>
 - /reports <code><yes/no/on/off></code>: Enable/disable user reports.
 
-To report a user, simply reply to his message with @admin or /report; Rose will then reply with a message stating that admins have been notified. This message tags all the chat admins; same as if they had been @'ed.
+To report a user, simply reply to his message with @admin or /report; Bot will then reply with a message stating that admins have been notified. This message tags all the chat admins; same as if they had been @'ed.
 
-Note that the report commands do not work when admins use them; or when used to report an admin. Rose assumes that admins don't need to report, or be reported!"""
+Note that the report commands do not work when admins use them; or when used to report an admin. Bot assumes that admins don't need to report, or be reported!"""
+    NOTE_TXT = """Notes
+
+Save data for future users with notes!
+
+Notes are great to save random tidbits of information; a phone number, a nice gif, a funny picture - anything!
+
+<b>User commands:</b>
+- /get <notename>: Get a note.
+- #notename: Same as /get.
+
+<b>Admin commands:</b>
+- /save <notename> <note text>: Save a new note called "word". Replying to a message will save that message. Even works on media!
+- /clear <notename>: Delete the associated note.
+- /notes: List all notes in the current chat.
+- /saved: Same as /notes.
+- /clearall: Delete <b>ALL</b> notes in a chat. This cannot be undone.
+- /privatenotes: Whether or not to send notes in PM. Will send a message with a button which users can click to get the note in PM."""
     PARGE_TXT = """<b>Purges</b>
 
 Need to delete lots of messages? That's what purges are for!
