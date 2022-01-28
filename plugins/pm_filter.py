@@ -500,6 +500,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
+    elif query.data == "fun":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.FUN_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
     elif query.data == "trslt":
         buttons = [[
             InlineKeyboardButton('🏃 Back', callback_data='extra'),
@@ -564,7 +575,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('Nᴏᴛᴇs', callback_data='note'),
             InlineKeyboardButton('Mɪsᴄ', callback_data='misc'),
-            InlineKeyboardButton('Pɪɴɢ', callback_data='noth'),
+            InlineKeyboardButton('Fᴜɴ', callback_data='fun'),
         ], [
             InlineKeyboardButton('Iᴍᴅʙ', callback_data='imbd'),
             InlineKeyboardButton('Rᴇᴘᴏʀᴛ', callback_data='ripot'),
