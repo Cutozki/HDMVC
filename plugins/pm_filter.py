@@ -586,7 +586,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Gɪᴛʜᴜʙ', callback_data='source'),
         ], [
             InlineKeyboardButton('« Pʀᴇᴠ', callback_data='noth'),
-            InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close'),
+            InlineKeyboardButton('Cʟᴏsᴇ', callback_data='close_data'),
             InlineKeyboardButton('Nᴇxᴛ »', callback_data='noth'),
         ], [
             InlineKeyboardButton('👩‍🦯 Back', callback_data='help'),
