@@ -571,7 +571,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         ], [
             InlineKeyboardButton('Pᴜʀɢᴇ', callback_data='parge'),
             InlineKeyboardButton('Mᴜᴛᴇ', callback_data='mut'),
-            InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
+            InlineKeyboardButton('AFK', callback_data='afk'),
         ], [
             InlineKeyboardButton('Nᴏᴛᴇs', callback_data='note'),
             InlineKeyboardButton('Mɪsᴄ', callback_data='misc'),
@@ -639,6 +639,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.PARGE_TXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+        )
+    elif query.data == "afk":
+        buttons = [[
+            InlineKeyboardButton('🏃 Back', callback_data='extra'),
+            InlineKeyboardButton('❌ Close', callback_data='close_data')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.AFK_TXT,
             reply_markup=reply_markup,
             parse_mode='html'
         )
