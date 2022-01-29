@@ -123,6 +123,10 @@ Need to delete lots of messages? That's what purges are for!
 -> <code>/purgefrom</code>
 - Mark the message to purge to (as a reply). All messages between the previously marked /purgefrom and the newly marked /purgeto will be deleted.
 -> /purgeto"""
+    AFK_TXT = """Here is the help for the <b>AFK</b> module:
+- /afk <reason>: mark yourself as AFK(away from keyboard).
+- brb <reason>: same as the afk command - but not a command.
+When marked as AFK, any mentions will be replied to with a message to say you're not available!"""
     LOKE_TXT = """<b>Locks</b>
 
 Do stickers annoy you? or want to avoid people sharing links? or pictures? You're in the right place!
