@@ -46,6 +46,10 @@ async def save_group(bot, message):
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
+        buttons = [[
+            InlineKeyboardButton('🎁 Shere This Group', url=f'{link}')
+        ], [
+            InlineKeyboardButton('🤖 Shere Me', url=f'http://t.me/{temp.U_NAME}?startgroup=true')]]
         if settings["welcome"]:
             for u in message.new_chat_members:
                 if (temp.MELCOW).get('welcome') is not None:
@@ -54,7 +58,7 @@ async def save_group(bot, message):
                     except:
                         pass
                 temp.MELCOW['welcome'] = await message.reply(f"<b>Hey ,{u.mention} 😍 , Welcome to {message.chat.title}™.</b>\n<code>Type Movies in Correct Spelling</code>\n\n<i><a href= https://telegra.ph/How-To-Add-Me-In-Your-Group-01-30>➕ Add Me ➕</a></i>")
-
+reply_markup=InlineKeyboardMarkup(buttons)
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
