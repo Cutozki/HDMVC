@@ -60,6 +60,7 @@ async def save_group(bot, message):
                         pass
                 temp.MELCOW['welcome'] = await message.reply(f"<b>Hey ,{u.mention} 😍 , Welcome to {message.chat.title}™.</b>\n<code>Type Movies in Correct Spelling</code>\n\n<i><a href= https://telegra.ph/How-To-Add-Me-In-Your-Group-01-30>➕ Add Me ➕</a></i>")
         reply_markup=InlineKeyboardMarkup(buttons)
+        disable_web_page_preview=True
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
 async def leave_a_chat(bot, message):
