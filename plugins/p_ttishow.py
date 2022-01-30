@@ -46,6 +46,7 @@ async def save_group(bot, message):
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
+            link = (await bot.create_chat_invite_link(chat_id)).invite_link
         buttons = [[
             InlineKeyboardButton('🎁 Shere This Group', url=f'{link}')
         ], [
