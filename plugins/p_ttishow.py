@@ -58,7 +58,7 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey ,{u.mention} 😍 , Welcome to {message.chat.title}™.</b>\n<code>Type Movies in Correct Spelling</code>\n\n<i><a href= https://telegra.ph/How-To-Add-Me-In-Your-Group-01-30>➕ Add Me ➕</a></i>")
+                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey ,{u.mention} 😍 , Welcome to {message.chat.title}™.</b>\n<code>Type Movies in Correct Spelling</code>\n\n<b><i>➕ @Add_Me_In_Your_Group ➕</i></b>")
         reply_markup=InlineKeyboardMarkup(buttons)
         
 
