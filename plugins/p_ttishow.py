@@ -46,9 +46,9 @@ async def save_group(bot, message):
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
-        link = f"@{message.forward_from_chat.username}"
+        
         buttons = [[
-            InlineKeyboardButton('🎁 Shere This Group', url=f'{link}')
+            InlineKeyboardButton('🎁 Shere This Group', url=f'{message.chat.title}')
         ], [
             InlineKeyboardButton('🤖 Shere Me', url=f'http://t.me/{temp.U_NAME}?startgroup=true')]]
         if settings["welcome"]:
