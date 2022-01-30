@@ -56,7 +56,7 @@ async def save_group(bot, message):
                 temp.MELCOW['welcome'] = await message.reply(f"<b>Hey ,{u.mention} 😍 , Welcome to {message.chat.title}™.</b>
 <code>Type Movies in Correct Spelling</code>
 
-<i><a href= https://telegra.ph/IQBAL-01-30>➕ Add Me To Your Group As Admin ➕</a></i>")
+<i><a href= https://telegra.ph/How-To-Add-Me-In-Your-Group-01-30>➕ Add Me To Your Group As Admin ➕</a></i>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
