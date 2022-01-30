@@ -46,11 +46,6 @@ async def save_group(bot, message):
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
-        if type(chat_id) is int:
-        try:
-            link = (await bot.create_chat_invite_link(chat_id)).invite_link
-        except ChatAdminRequired:
-    else:
         link = f"@{message.forward_from_chat.username}"
         buttons = [[
             InlineKeyboardButton('🎁 Shere This Group', url=f'{link}')
